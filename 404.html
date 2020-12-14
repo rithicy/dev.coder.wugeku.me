@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Q and A for coder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        /*
+ * Globals
+ */
+
+
+        /* Custom default button */
+        .btn-secondary,
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            color: #333;
+            text-shadow: none;
+            /* Prevent inheritance from `body` */
+        }
+
+
+        /*
+ * Base structure
+ */
+
+        body {
+            text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+            box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+        }
+
+        .cover-container {
+            max-width: 42em;
+        }
+
+
+        /*
+ * Header
+ */
+
+        .nav-masthead .nav-link {
+            padding: .25rem 0;
+            font-weight: 700;
+            color: rgba(255, 255, 255, .5);
+            background-color: transparent;
+            border-bottom: .25rem solid transparent;
+        }
+
+        .nav-masthead .nav-link:hover,
+        .nav-masthead .nav-link:focus {
+            border-bottom-color: rgba(255, 255, 255, .25);
+        }
+
+        .nav-masthead .nav-link+.nav-link {
+            margin-left: 1rem;
+        }
+
+        .nav-masthead .active {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="d-flex text-center text-white bg-dark" style="height: 100vh;">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="mb-auto">
+            <div>
+                <h3 class="float-md-start mb-0">coder.wugeku.me</h3>
+                <nav class="nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link active" aria-current="page" href="#" onclick="routeChangeEvent('')">Home</a>
+                    <a class="nav-link" href="#" onclick="routeChangeEvent('qna')">Q & A</a>
+                    <a class="nav-link" href="#" onclick="routeChangeEvent('ask')">Ask Something</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="px-3" id="home">
+            <h1>Why this website ?</h1>
+            <p class="lead">this website is sharing knowledge of software engineering.</p>
+            <p class="lead">
+                <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Ask/Answer Question</a>
+            </p>
+        </main>
+
+        <main class="px-3" id="qna">
+            <div class="card" >
+                <div class="card-header bg-dark text-white">Q & A List</div>
+                <div class="card-body" style="max-height: 70vh; overflow: auto;">
+                    <!--  -->
+                    <p>
+                        <div class="text-dark">
+                            What is programming best for game dev?
+                        </div>
+                        <a 
+                        
+                         data-toggle="collapse" 
+                         href="#collapseExample"
+                          role="button"
+                            aria-expanded="false" 
+                            aria-controls="collapseExample">
+                            see more
+                        </a>
+                    </p>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body text-dark">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                            ea proident.
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <p>
+                        <div class="text-dark">
+                            What is programming best for game dev?
+                        </div>
+                        <a 
+                        
+                         data-toggle="collapse" 
+                         href="#collapseExample2"
+                          role="button"
+                            aria-expanded="false" 
+                            aria-controls="collapseExample2">
+                            see more
+                        </a>
+                    </p>
+                    <div class="collapse" id="collapseExample2">
+                        <div class="card card-body text-dark">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                            ea proident.
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <p>
+                        <div class="text-dark">
+                            What is programming best for game dev?
+                        </div>
+                        <a 
+                        
+                         data-toggle="collapse3" 
+                         href="#collapseExample"
+                          role="button"
+                            aria-expanded="false" 
+                            aria-controls="collapseExample3">
+                            see more
+                        </a>
+                    </p>
+                    <div class="collapse" id="collapseExample3">
+                        <div class="card card-body text-dark">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                            ea proident.
+                        </div>
+                    </div>
+                    <!--  -->
+                    <!--  -->
+                    <p>
+                        <div class="text-dark">
+                            What is programming best for game dev?
+                        </div>
+                        <a 
+                        
+                         data-toggle="collapse" 
+                         href="#collapseExample4"
+                          role="button"
+                            aria-expanded="false" 
+                            aria-controls="collapseExample4">
+                            see more
+                        </a>
+                    </p>
+                    <div class="collapse" id="collapseExample4">
+                        <div class="card card-body text-dark">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
+                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
+                            ea proident.
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+                <div class="card-footer">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination justify-content-center mb-0">
+                          <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                </div>
+
+            </div>
+
+        </main>
+        <main id="ask"></main>
+
+        <footer class="mt-auto text-white-50">
+            <p>Powered By <a href="https://getbootstrap.com/" class="text-white">Bootstrap.</p>
+        </footer>
+    </div>
+
+<script>
+    function routeChangeEvent(path) {
+        if(path) 
+        window.history.pushState('', 'Title', '/'+ path);
+        switch (window.location.pathname) {
+            case '/qna':
+                document.getElementById('home').style.display = 'none';
+                document.getElementById('qna').style.display = 'block';
+                document.getElementById('ask').style.display = 'none';
+                break;
+            case '/ask':
+                document.getElementById('home').style.display = 'none';
+                document.getElementById('qna').style.display = 'none';
+                document.getElementById('ask').style.display = 'block';
+                break;
+            default:
+                document.getElementById('home').style.display = 'block';
+                document.getElementById('qna').style.display = 'none';
+                document.getElementById('ask').style.display = 'none';
+                break;
+        }
+        console.log(window.location.pathname);  
+    }
+    routeChangeEvent(window.location.pathname);
+
+</script>
+
+</body>
+
+</html>
