@@ -88,7 +88,7 @@
             <div>
                 <h3 class="float-md-start mb-0">coder.wugeku.me</h3>
                 <nav class="nav nav-masthead justify-content-center float-md-end">
-                                       <a class="nav-link active" aria-current="page" href="#" id="home-route" onclick="routeChangeEvent('/')">Home</a>
+               <a class="nav-link active" aria-current="page" href="#" id="home-route" onclick="routeChangeEvent('/')">Home</a>
                     <a class="nav-link" href="#" id="qna-route" onclick="routeChangeEvent('/qna')">Q & A</a>
                     <a class="nav-link" href="#" id="ask-route" onclick="routeChangeEvent('/ask')">Ask Something</a>
                 </nav>
@@ -106,8 +106,9 @@
         <main class="px-3" id="qna">
             <div class="card" >
                 <div class="card-header bg-dark text-white">Q & A List</div>
-                <div class="card-body" style="max-height: 70vh; overflow: auto;">
+                <div class="card-body" style="max-height: 70vh; overflow: auto;" id="qna-list">
                     <!--  -->
+                  <div class="qna-item" id="qna-item">
                     <p>
                         <div class="text-dark">
                             What is programming best for game dev?
@@ -129,76 +130,9 @@
                             ea proident.
                         </div>
                     </div>
-                    <!--  -->
-                    <!--  -->
-                    <p>
-                        <div class="text-dark">
-                            What is programming best for game dev?
-                        </div>
-                        <a 
-                        
-                         data-toggle="collapse" 
-                         href="#collapseExample2"
-                          role="button"
-                            aria-expanded="false" 
-                            aria-controls="collapseExample2">
-                            see more
-                        </a>
-                    </p>
-                    <div class="collapse" id="collapseExample2">
-                        <div class="card card-body text-dark">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                            ea proident.
-                        </div>
-                    </div>
-                    <!--  -->
-                    <!--  -->
-                    <p>
-                        <div class="text-dark">
-                            What is programming best for game dev?
-                        </div>
-                        <a 
-                        
-                         data-toggle="collapse3" 
-                         href="#collapseExample"
-                          role="button"
-                            aria-expanded="false" 
-                            aria-controls="collapseExample3">
-                            see more
-                        </a>
-                    </p>
-                    <div class="collapse" id="collapseExample3">
-                        <div class="card card-body text-dark">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                            ea proident.
-                        </div>
-                    </div>
-                    <!--  -->
-                    <!--  -->
-                    <p>
-                        <div class="text-dark">
-                            What is programming best for game dev?
-                        </div>
-                        <a 
-                        
-                         data-toggle="collapse" 
-                         href="#collapseExample4"
-                          role="button"
-                            aria-expanded="false" 
-                            aria-controls="collapseExample4">
-                            see more
-                        </a>
-                    </p>
-                    <div class="collapse" id="collapseExample4">
-                        <div class="card card-body text-dark">
-                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                            squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente
-                            ea proident.
-                        </div>
-                    </div>
-                    <!--  -->
+                  </div>
+                    
+              
                 </div>
                 <div class="card-footer">
                     <nav aria-label="Page navigation example">
@@ -219,7 +153,18 @@
             </div>
 
         </main>
-        <main id="ask"></main>
+        <main id="ask">
+          <div class="card">
+            <div class="card-body">
+              <div id="form">
+<!--                 <input type="text" class="form-control" placeholder="ask"/> -->
+                <label>ask here:</label>
+                <textarea class="form-control" placeholder="ask" id="question"></textarea>
+                <button onclick="onSubmit()">Submit</button>
+              </div>
+            </div>
+          </div>
+        </main>
 
         <footer class="mt-auto text-white-50">
             <p>Powered By <a href="https://getbootstrap.com/" class="text-white">Bootstrap.</p>
@@ -227,57 +172,68 @@
     </div>
 
 <script>
-    
+    function onSubmit() {
+      let question = document.getElementById('question').value;
+      let newQuestion = `<div class="qna-item"> <p> <div class="text-dark">` + question + `</div></p></div>`;
+      document.getElementById("qna-list").appendChild(newQuestion);
+       
+    }  
+  
     function hasClass(el, className)
-{
-    if (el.classList)
-        return el.classList.contains(className);
-    return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
-}
-
-function addClass(el, className)
-{
-    if (el.classList)
-        el.classList.add(className)
-    else if (!hasClass(el, className))
-        el.className += " " + className;
-}
-
-function removeClass(el, className)
-{
-    if (el.classList)
-        el.classList.remove(className)
-    else if (hasClass(el, className))
     {
-        var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
-        el.className = el.className.replace(reg, ' ');
+        if (el.classList)
+            return el.classList.contains(className);
+        return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
     }
-}
+
+    function addClass(el, className)
+    {
+        if (el.classList)
+            el.classList.add(className)
+        else if (!hasClass(el, className))
+            el.className += " " + className;
+    }
+
+    function removeClass(el, className)
+    {
+        if (el.classList)
+            el.classList.remove(className)
+        else if (hasClass(el, className))
+        {
+            var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+            el.className = el.className.replace(reg, ' ');
+        }
+    }
     
     function routeChangeEvent(path) {
         if(path) 
         window.history.pushState('', 'Title', path);
         switch (window.location.pathname) {
             case '/qna':
-                addClass( document.getElementById('qna') ,'active');
-                document.getElementById('home-route').style.display = 'none';
+                addClass( document.getElementById('qna-route') ,'active');
+                removeClass( document.getElementById('home-route') ,'active');
+                removeClass( document.getElementById('ask-route') ,'active');
+                document.getElementById('home').style.display = 'none';
                 document.getElementById('qna').style.display = 'block';
                 document.getElementById('ask').style.display = 'none';
                 break;
             case '/ask':
-                addClass( document.getElementById('ask') ,'active');
-                document.getElementById('home-route').style.display = 'none';
+                addClass( document.getElementById('ask-route') ,'active');
+                removeClass( document.getElementById('home-route') ,'active');
+                removeClass( document.getElementById('qna-route') ,'active');
+                document.getElementById('home').style.display = 'none';
                 document.getElementById('qna').style.display = 'none';
                 document.getElementById('ask').style.display = 'block';
                 break;
             default:
-                addClass( document.getElementById('home') ,'active');
-                document.getElementById('home-route').style.display = 'block';
+                addClass( document.getElementById('home-route') ,'active');
+                removeClass( document.getElementById('ask-route') ,'active');
+                removeClass( document.getElementById('qna-route') ,'active');
+                document.getElementById('home').style.display = 'block';
                 document.getElementById('qna').style.display = 'none';
                 document.getElementById('ask').style.display = 'none';
                 break;
-        }
-        console.log(window.location.pathname);  
+        } 
     }
     routeChangeEvent(window.location.pathname);
 
